@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngMap']);
 
 /// Routes ///
 myApp.config(function($routeProvider, $locationProvider) {
@@ -30,6 +30,10 @@ myApp.config(function($routeProvider, $locationProvider) {
           return UserService.getuser();
         }
       }
+    })
+    .when('/map', {
+      templateUrl: '/views/templates/map.html',
+      controller: 'MapController'
     })
     .otherwise({
       redirectTo: 'home'
