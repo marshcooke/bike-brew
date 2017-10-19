@@ -9,6 +9,7 @@ var sessionConfig = require('./modules/session.config');
 var indexRouter = require('./routes/index.router');
 var userRouter = require('./routes/user.router');
 var registerRouter = require('./routes/register.router');
+var mapRouter = require('./routes/map.router');
 
 var port = process.env.PORT || 6172;
 
