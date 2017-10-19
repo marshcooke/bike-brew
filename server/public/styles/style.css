@@ -3,6 +3,8 @@ body, html {
   padding: 0;
   font-family: sans-serif;
   font-size: 14px;
+  font: white;
+  background-color: #F3EEFF;
 }
 
 .instructions .container h1 {
@@ -11,8 +13,7 @@ body, html {
 }
 
 .instructions {
-  background-color: #333333;
-  color: #DDDDDD;
+  background-color: #F3EEFF;
   padding: 15px;
 }
 
@@ -49,7 +50,7 @@ body, html {
 }
 
 .navbar {
-  background-color: #333333;
+  background-color: #856BBA;
   width: 100%;
   border-radius: 0px;
 }
@@ -63,6 +64,7 @@ ul {
 
 li {
   float: left;
+  font-weight: bold;
 }
 
 li a {
@@ -75,6 +77,7 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  text-decoration: underline;
-  color: #eee;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(231, 212, 255);
 }
