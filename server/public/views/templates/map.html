@@ -1,8 +1,15 @@
 <div ng-include="'views/partials/nav.html'"></div>
 <div class="container">
 
+    
+
     <ng-map zoom="15" center="current-location">
-        <bicycling-layer></bicycling-layer>
-      </ng-map>
+        <bicycling-layer>
+            <directions draggable="true" panel="directions-panel" travel-mode="" waypoints="[{location:'kingston', stopover:true}]" origin="current-location"
+                destination="">
+            </directions>
+
+        </bicycling-layer>
+    </ng-map>
 
 </div>
