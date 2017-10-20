@@ -2,9 +2,11 @@ myApp.factory('UserService', function($http, $location){
   console.log('UserService Loaded');
 
   var userObject = {};
+  var allBreweriesObj = {brew: []};
 
   return {
     userObject : userObject,
+    allBreweriesObj : allBreweriesObj,
 
     getuser : function(){
       console.log('UserService -- getuser');
@@ -30,6 +32,20 @@ myApp.factory('UserService', function($http, $location){
         console.log('UserService -- logout -- logged out');
         $location.path("/home");
       });
+    },
+
+    getBreweries : function() {
+      $http({
+        method: 'GET',
+        url: '/breweries'
+      }).then(function(response) {
+        console.log('response is: ', response.data);
+        allBreweriesObj.brew = response.data;
+      })
     }
+
+
+
+
   };
 });

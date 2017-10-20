@@ -1,4 +1,8 @@
 <div ng-include="'views/partials/nav.html'"></div>
-<div class="container">
-      <h1>Select breweries to add to your list of favorites! </h1>
+<div class="container" ng-init="ic.getBreweries()">
+      <h1>Select breweries to add to your list of favorites!</h1>
+      <div ng-repeat="brewery in ic.allBreweriesObj.brew">
+            <p>{{brewery}}</p>
+      </div>
+
 </div>

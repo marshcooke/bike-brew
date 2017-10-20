@@ -10,6 +10,7 @@ var indexRouter = require('./routes/index.router');
 var userRouter = require('./routes/user.router');
 var registerRouter = require('./routes/register.router');
 var mapRouter = require('./routes/map.router');
+var breweryRouter = require('./routes/breweries.router.js');
 
 var port = process.env.PORT || 6172;
 
@@ -30,6 +31,8 @@ app.use(passport.session());
 // Routes
 app.use('/register', registerRouter);
 app.use('/user', userRouter);
+app.use('/map', mapRouter);
+app.use('/breweries', breweryRouter);
 
 // Catch all bucket, must be last!
 app.use('/', indexRouter);
