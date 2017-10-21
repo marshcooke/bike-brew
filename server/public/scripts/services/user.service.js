@@ -42,9 +42,14 @@ myApp.factory('UserService', function($http, $location){
         console.log('response is: ', response.data);
         allBreweriesObj.brew = response.data;
       })
+    },
+
+    addBreweries : function() {
+      $http({
+        method: 'POST',
+        url: '/'
+      })
     }
-
-
 
 
   };

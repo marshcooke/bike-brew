@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 router.get('/', function (req, res) {
 // add in authenication
 
-    console.log('in get / response function');
+    console.log('in get / function');
     pool.connect(function (connectionError, client, done) {
         if (connectionError) {
             console.log(connectionError);
@@ -25,29 +25,29 @@ router.get('/', function (req, res) {
     });
 });
 
-// router.post('/', function (req, res) {
-//     var task = req.body.task;
-//     console.log('in post / response function', task);
-//     pool.connect(function (connectionError, client, done) {
-//         if (connectionError) {
-//             console.log(connectionError);
-//             res.sendStatus(500);
-//         } else {
-//             var queryString = 'INSERT INTO todos (task) VALUES ($1);';
-//             var values = [task];
-//             client.query(queryString, values, function (queryError, resultsObj) {
-//                 done();
-//                 if (queryError) {
-//                     console.log(connectionError);
-//                     res.sendStatus(500);
-//                 } else {
-//                     console.log('resultsObj: ', resultsObj);
-//                     res.sendStatus(201);
-//                 }
-//             });
-//         }
-//     });
-// });
+router.post('/', function (req, res) {
+    var task = req.body;
+    console.log('in post / function', task);
+    pool.connect(function (connectionError, client, done) {
+        if (connectionError) {
+            console.log(connectionError);
+            res.sendStatus(500);
+        } else {
+            var queryString = 'SELECT id FROM breweries INNER JOIN users_breweries ON breweries.id = breweries_id;'
+            var values = [breweries];
+            client.query(queryString, values, function (queryError, resultsObj) {
+                done();
+                if (queryError) {
+                    console.log(queryError);
+                    res.sendStatus(500);
+                } else {
+                    console.log('resultsObj: ', resultsObj);
+                    res.sendStatus(201);
+                }
+            });
+        }
+    });
+});
 
 // router.delete('/:id', function (req, res) {
 //     console.log('in delete /tasks/:id', req.params.id);
