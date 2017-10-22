@@ -3,4 +3,17 @@
 
     <h1 id="welcome" class="lead">Welcome, {{uc.userObject.userName}}! Here are your favorite breweries:</h1>
     <!-- <button class="btn btn-default" ng-click="uc.userService.logout()">Log Out</button> -->
+    <div class="container" ng-init="uc.getFavorites()">
+        <table>
+            <tr>
+            <th>Favorite Breweries</th>
+            <th></th>
+            </tr>
+            <tr ng-repeat="favorite in uc.allFavoritesObj.fav">
+                <td>{{favorite.breweryname}}</td>
+                <td><button id="delete">Remove from Favorites</button></td>
+            </tr>
+        </table>
+    </div>
+
 </div>
