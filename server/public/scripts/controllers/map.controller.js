@@ -5,4 +5,3 @@ myApp.controller('MapController', function(NgMap) {
 
     
   });
-  

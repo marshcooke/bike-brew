@@ -33,7 +33,12 @@ myApp.config(function($routeProvider, $locationProvider) {
     })
     .when('/map', {
       templateUrl: '/views/templates/map.html',
-      controller: 'MapController'
+      controller: 'MapController',
+      resolve: {
+        getuser : function(UserService){
+          return UserService.getuser();
+        }
+      }
     })
     .otherwise({
       redirectTo: 'home'
