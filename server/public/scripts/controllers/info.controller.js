@@ -13,4 +13,10 @@ myApp.controller('InfoController', function(UserService) {
     console.log('brews: ', vm.allBreweriesObj);
   }
   
+  vm.addFavorites = function() {
+    UserService.addFavorites();
+    vm.allFavoritesObj = UserService.allFavoritesObj;
+    console.log('favorites: ', vm.allFavoritesObj)
+  }
+
 });

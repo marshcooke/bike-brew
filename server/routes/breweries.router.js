@@ -3,7 +3,7 @@ var pool = require('../modules/pool');
 var bodyParser = require('body-parser');
 
 router.get('/', function (req, res) {
-// add in authenication
+// add in authenication?
 
     console.log('in get / function');
     pool.connect(function (connectionError, client, done) {
@@ -26,16 +26,17 @@ router.get('/', function (req, res) {
 });
 
 router.post('/', function (req, res) {
-    var task = req.body;
-    console.log('in post / function', task);
+    var breweryName = req.body.brewery;
+    var breweryLongitude = req.body.longitude;
+    var breweryLatitude = req.body.Latitude;
+    console.log('in post / function, req.body: ', req.body);
     pool.connect(function (connectionError, client, done) {
         if (connectionError) {
             console.log(connectionError);
             res.sendStatus(500);
         } else {
             var queryString = 'SELECT id FROM breweries INNER JOIN users_breweries ON breweries.id = breweries_id;'
-            var values = [breweries];
-            client.query(queryString, values, function (queryError, resultsObj) {
+            client.query(queryString, function (queryError, resultsObj) {
                 done();
                 if (queryError) {
                     console.log(queryError);

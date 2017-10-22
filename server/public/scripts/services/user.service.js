@@ -3,10 +3,12 @@ myApp.factory('UserService', function($http, $location){
 
   var userObject = {};
   var allBreweriesObj = {brew: []};
+  var allFavoritesObj = {fav: []};
 
   return {
     userObject : userObject,
     allBreweriesObj : allBreweriesObj,
+    allFavoritesObj : allFavoritesObj,
 
     getuser : function(){
       console.log('UserService -- getuser');
@@ -44,10 +46,12 @@ myApp.factory('UserService', function($http, $location){
       })
     },
 
-    addBreweries : function() {
+    addFavorites : function() {
       $http({
         method: 'POST',
         url: '/'
+      }).then(function(response){
+        console.log('post response is: ', response);
       })
     }
 
