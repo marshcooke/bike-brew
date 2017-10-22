@@ -32,8 +32,11 @@ router.get('/', function (req, res) {
 
 router.post('/', function (req, res) {
     if (req.isAuthenticated()) {
-        console.log('user is logged in');
+        console.log('user is logged in', req.user);
 
+        console.log('breweries req.body post: ', req.body);
+        var userId = req.user.id;
+        var breweryId = req.body.id;
         var breweryName = req.body.brewery;
         var breweryLongitude = req.body.longitude;
         var breweryLatitude = req.body.Latitude;
@@ -43,8 +46,9 @@ router.post('/', function (req, res) {
                 console.log(connectionError);
                 res.sendStatus(500);
             } else {
-                var queryString = 'SELECT id FROM breweries INNER JOIN users_breweries ON breweries.id = breweries_id;'
-                client.query(queryString, function (queryError, resultsObj) {
+                var queryString = 'INSERT INTO users_breweries (user_id, breweries_id) VALUES ($1, $2) RETURNING breweries_id;'
+                var values = [userId, breweryId]
+                client.query(queryString, values, function (queryError, resultsObj) {
                     done();
                     if (queryError) {
                         console.log(queryError);
@@ -61,7 +65,6 @@ router.post('/', function (req, res) {
         res.send(false);
     }
 });
-
 
 // router.delete('/:id', function (req, res) {
 //     console.log('in delete /tasks/:id', req.params.id);

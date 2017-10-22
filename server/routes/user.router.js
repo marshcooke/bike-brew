@@ -37,14 +37,14 @@ router.get('/', function (req, res) {
         console.log(connectionError);
         res.sendStatus(500);
       } else {
-        client.query('SELECT breweries.id  FROM users_breweries WHERE users.id = user_id;', function (queryError, resultsObj) {
+        client.query('SELECT breweries.id FROM users_breweries WHERE users_id = breweries_id;', function (queryError, resultsObj) {
           done();
           if (queryError) {
             console.log(queryError);
             res.sendStatus(500);
           } else {
-            console.log('resultobj.rows: ', resultsObj.rows);
-            res.send(resultsObj.rows);
+            console.log('resultobj.rows: ', resultsObj.breweryname);
+            res.send(resultsObj.breweryname);
           }
         });
       }

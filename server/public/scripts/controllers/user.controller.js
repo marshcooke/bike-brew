@@ -6,7 +6,7 @@ myApp.controller('UserController', function(UserService) {
 
   vm.allFavoritesObj = UserService.allFavoritesObj;
 
-  vm.getFavoritesObj = function() {
+  vm.getFavorites = function() {
     UserService.getFavorites();
 
     // vm.allFavoritesObj = UserService.allFavoritesObj;
