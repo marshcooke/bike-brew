@@ -2,26 +2,40 @@
 <div class="container">
 
     <h1>Choose your destination!</h1>
-
-    <ng-map zoom="15" center="current-location">
-        <bicycling-layer>
-            <directions draggable="true" panel="directions-panel" travel-mode="" waypoints="[{location:'kingston', stopover:true}]" origin="current-location"
-                destination="">
-            </directions>
-
-        </bicycling-layer>
-    </ng-map>
+    <div>
+        <ng-map zoom="15" center="current-location">
+            <bicycling-layer>
+                <directions draggable="true" panel="directions-panel" travel-mode="BICYCLING" waypoints="[{location:'kingston', stopover:true}]"
+                    origin="current-location" destination="">
+                </directions>
+                <!-- hard coded starting location: -->
+                <custom-marker id="start" 
+                    position="2800 Lyndale Avenue S, Minneapolis, MN, USA">
+                    <div> Start Here </div>
+                </custom-marker>
+                <!-- hard coded ending location: -->
+                <custom-marker id="end" 
+                    position="301 4th Ave S Suite 577, Minneapolis, MN, USA">
+                    <div> Ends Here </div>
+                </custom-marker>
+            </bicycling-layer>
+        </ng-map>
+        <div id="directions-panel" style="width: 28%; float:left; height: 100%; overflow: auto; padding: 0px 5px">
+            </div>
+    </div>
 
     <form>
-    <div>
-        <label for="startingDestination">Starting destination:</label> 
-        <!-- // Or current locaiton??? -->
-        <input type="text"/>
-    </div>
-    <div>
-        <label for="startingDestination">Ending destination:</label>
-        <input type="text"/>
-    </div>
+        <div>
+            <label for="startingDestination">Starting destination:</label>
+            <input type="text" />
+        </div>
+        <div>
+            <label for="startingDestination">Ending destination:</label>
+            <input type="text" />
+        </div>
+        <div>
+            <button for="startDirections">Start Your Ride</button>
+        </div>
     </form>
 
 </div>
