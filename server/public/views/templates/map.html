@@ -8,16 +8,14 @@
                 <directions draggable="true" panel="directions-panel" travel-mode="BICYCLING" waypoints="[{location:'kingston', stopover:true}]"
                     origin="current-location" destination="">
                 </directions>
-                <!-- hard coded starting location: -->
-                <custom-marker id="start" 
-                    position="2800 Lyndale Avenue S, Minneapolis, MN, USA">
-                    <div> Start Here </div>
-                </custom-marker>
-                <!-- hard coded ending location: -->
-                <custom-marker id="end" 
-                    position="301 4th Ave S Suite 577, Minneapolis, MN, USA">
-                    <div> Ends Here </div>
-                </custom-marker>
+                <marker id="start" 
+                    position="44.9852, 93.2765">
+                    <!-- <div> Start Here </div> -->
+            </marker>
+                <marker id="end" 
+                    position="44.9648, 93.1827">
+                    <!-- <div> Ends Here </div> -->
+                </marker>
             </bicycling-layer>
         </ng-map>
         <div id="directions-panel" style="width: 28%; float:left; height: 100%; overflow: auto; padding: 0px 5px">

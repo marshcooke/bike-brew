@@ -28,5 +28,34 @@ router.get('/logout', function(req, res) {
   res.sendStatus(200);
 });
 
+router.get('/favorite', function (req, res) {
+  if (req.isAuthenticated()) {
+    console.log('user is logged in');
+    // console.log('in get / function, req.body: ', req.body);
+    var userId = req.user.id;
+    console.log('user id? ', userId);
+    pool.connect(function (connectionError, client, done) {
+      if (connectionError) {
+        console.log(connectionError);
+        res.sendStatus(500);
+      } else {
+        client.query('SELECT * FROM users_breweries INNER JOIN breweries ON users_breweries.breweries_id = breweries.id WHERE users_id = $1;', [userId], function (queryError, resultsObj) {
+          done();
+          if (queryError) {
+            console.log(queryError);
+            res.sendStatus(500);
+          } else {
+            console.log('resultobj.row: ', resultsObj.rows);
+            res.send(resultsObj.rows);
+          }
+        });
+      }
+    });
+  } else {
+    console.log('not logged in');
+    res.send(false);
+  }
+});
+
 
 module.exports = router;

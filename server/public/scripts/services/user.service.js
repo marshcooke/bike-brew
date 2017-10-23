@@ -6,6 +6,7 @@ myApp.service('UserService', function ($http, $location) {
   self.userObject = {};
   self.allBreweriesObj = { brew: [] };
   self.allFavoritesObj = { favorite: [] };
+  self.mapFavoritesObj = {};
 
   self.getuser = function () {
     console.log('UserService -- getuser');
@@ -62,4 +63,24 @@ myApp.service('UserService', function ($http, $location) {
       self.allFavoritesObj.favorite = response.data;
     })
   }
+
+  self.deleteFavorites = function (brewery) {
+    $http({
+      method: 'DELETE',
+      url: '/breweries/' + brewery,
+    }).then(function (response) {
+      console.log('delete response is: ', response.data);
+    })
+  }
+
+  self.mapFavorites = function () {
+    $http({
+      method: 'GET',
+      url: '/map'
+    }).then(function (response) {
+      console.log('response is: ', response);
+      self.mapFavoritesObj.favorite = response.data;
+    })
+  }
+
 });

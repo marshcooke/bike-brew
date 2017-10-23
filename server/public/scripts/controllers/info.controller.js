@@ -17,5 +17,4 @@ myApp.controller('InfoController', function(UserService) {
     // vm.allFavoritesObj = UserService.allFavoritesObj;
     console.log('add favorites hit in ic')
   }
- 
 });

@@ -3,5 +3,10 @@ myApp.controller('MapController', function(NgMap) {
     var vm = this;
     vm.map = {};
 
+    vm.mapFavorites = function() {
+      UserService.mapFavorites();
+  
+      console.log('favorites: ', vm.mapFavoritesObj);
+    }
     
   });

@@ -8,10 +8,15 @@ myApp.controller('UserController', function(UserService) {
 
   vm.getFavorites = function() {
     UserService.getFavorites();
-
     // vm.allFavoritesObj = UserService.allFavoritesObj;
-
     console.log('favorites: ', vm.allFavoritesObj);
   }
 
+  vm.deleteFavorites = function(brewery) {
+    UserService.deleteFavorites(brewery);
+    // vm.allFavoritesObj = UserService.allFavoritesObj;
+    console.log('delete favorites hit in uc')
+    vm.getFavorites();
+  }
+  
 });
