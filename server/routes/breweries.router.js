@@ -34,7 +34,6 @@ router.post('/', function (req, res) {
     if (req.isAuthenticated()) {
         console.log('user is logged in', req.user);
 
-        console.log('breweries req.body post: ', req.body);
         var userId = req.user.id;
         var breweryId = req.body.id;
         var breweryName = req.body.brewery;

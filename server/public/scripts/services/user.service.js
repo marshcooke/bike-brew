@@ -5,7 +5,7 @@ myApp.service('UserService', function ($http, $location) {
 
   self.userObject = {};
   self.allBreweriesObj = { brew: [] };
-  self.allFavoritesObj = { fav: [] };
+  self.allFavoritesObj = { favorite: [] };
 
   self.getuser = function () {
     console.log('UserService -- getuser');
@@ -56,10 +56,10 @@ myApp.service('UserService', function ($http, $location) {
   self.getFavorites = function () {
     $http({
       method: 'GET',
-      url: '/user'
+      url: '/user/favorite'
     }).then(function (response) {
-      console.log('response is: ', response.data);
-      self.allFavoritesObj.fav = response.data;
+      console.log('response is: ', response);
+      self.allFavoritesObj.favorite = response.data;
     })
   }
 });
