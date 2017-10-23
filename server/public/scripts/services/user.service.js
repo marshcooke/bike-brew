@@ -43,11 +43,11 @@ myApp.service('UserService', function ($http, $location) {
     })
   }
 
-  self.addFavorites = function () {
+  self.addFavorites = function (brewery) {
     $http({
       method: 'POST',
-      url: '/',
-      data: [breweryname]
+      url: '/breweries',
+      data: [brewery]
     }).then(function (response) {
       console.log('post response is: ', response);
     })

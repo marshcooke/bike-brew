@@ -35,17 +35,14 @@ router.post('/', function (req, res) {
         console.log('user is logged in', req.user);
 
         var userId = req.user.id;
-        var breweryId = req.body.id;
-        var breweryName = req.body.brewery;
-        var breweryLongitude = req.body.longitude;
-        var breweryLatitude = req.body.Latitude;
+        var breweryId = req.body[0].id;
         console.log('in post / function, req.body: ', req.body);
         pool.connect(function (connectionError, client, done) {
             if (connectionError) {
                 console.log(connectionError);
                 res.sendStatus(500);
             } else {
-                var queryString = 'INSERT INTO users_breweries (user_id, breweries_id) VALUES ($1, $2) RETURNING breweries_id;'
+                var queryString = 'INSERT INTO users_breweries (users_id, breweries_id) VALUES ($1, $2) RETURNING breweries_id;'
                 var values = [userId, breweryId]
                 client.query(queryString, values, function (queryError, resultsObj) {
                     done();
