@@ -18,7 +18,14 @@
             </div>
         </form>
 
-        <ng-map id="map" zoom="15" center="current-location">
+        <ng-map id="map" zoom="15" center="44.9375,-93.2010">
+                <directions
+                draggable="true"
+                panel="directions-panel"
+                travel-mode="DRIVING"
+                origin="2011 3rd Avenue S, Minneapolis, MN 55404"
+                destination="351 4th Avenue S, Minneapolis, MN 55401">
+              </directions>
             <marker  ng-repeat="marker in mc.mapFavoritesObj.list" title="{{marker.breweryname}}" position="{{marker.latitude}},{{marker.longitude}}"></marker>
             <bicycling-layer>
                 <directions draggable="true" panel="directions-panel" travel-mode="BICYCLING" waypoints="[{location:'kingston', stopover:true}]"
