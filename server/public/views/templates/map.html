@@ -22,16 +22,11 @@
                 <directions
                 draggable="true"
                 panel="directions-panel"
-                travel-mode="DRIVING"
+                travel-mode="BICYCLING"
                 origin="2011 3rd Avenue S, Minneapolis, MN 55404"
                 destination="351 4th Avenue S, Minneapolis, MN 55401">
               </directions>
             <marker  ng-repeat="marker in mc.mapFavoritesObj.list" title="{{marker.breweryname}}" position="{{marker.latitude}},{{marker.longitude}}"></marker>
-            <bicycling-layer>
-                <directions draggable="true" panel="directions-panel" travel-mode="BICYCLING" waypoints="[{location:'kingston', stopover:true}]"
-                    origin="current-location" destination="">
-                </directions>
-            </bicycling-layer>
         </ng-map>
 
 
