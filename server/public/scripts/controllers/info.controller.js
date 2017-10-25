@@ -6,15 +6,13 @@ myApp.controller('InfoController', function(UserService) {
 
   vm.getBreweries = function() {
     UserService.getBreweries();
-    
-    // vm.allBreweriesObj = UserService.allBreweriesObj;     
-    
+        
     console.log('brews: ', vm.allBreweriesObj);
   }
   
   vm.addFavorites = function(brewery) {
     UserService.addFavorites(brewery);
-    // vm.allFavoritesObj = UserService.allFavoritesObj;
+
     console.log('add favorites hit in ic')
   }
 });

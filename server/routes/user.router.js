@@ -32,7 +32,6 @@ router.get('/logout', function (req, res) {
 router.get('/favorite', function (req, res) {
   if (req.isAuthenticated()) {
     console.log('user is logged in');
-    // console.log('in get / function, req.body: ', req.body);
     var userId = req.user.id;
     console.log('user id? ', userId);
     pool.connect(function (connectionError, client, done) {

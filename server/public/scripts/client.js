@@ -33,7 +33,7 @@ myApp.config(function($routeProvider, $locationProvider) {
     })
     .when('/map', {
       templateUrl: '/views/templates/map.html',
-      controller: 'MapController',
+      controller: 'MapController as mc',
       resolve: {
         getuser : function(UserService){
           return UserService.getuser();

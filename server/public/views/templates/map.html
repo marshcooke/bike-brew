@@ -3,37 +3,37 @@
 
     <h1>Choose your destination!</h1>
     <div>
-        <ng-map zoom="15" center="current-location">
+
+        <form>
+            <div>
+                <label for="startingDestination">Starting destination:</label>
+                <input type="text" />
+            </div>
+            <div>
+                <label for="startingDestination">Ending destination:</label>
+                <input type="text" />
+            </div>
+            <div>
+                <button for="startDirections">Start Your Ride</button>
+            </div>
+        </form>
+
+        <ng-map id="map" zoom="15" center="current-location">
+            <marker  ng-repeat="marker in mc.mapFavoritesObj.list" title="{{marker.breweryname}}" position="{{marker.latitude}},{{marker.longitude}}"></marker>
             <bicycling-layer>
                 <directions draggable="true" panel="directions-panel" travel-mode="BICYCLING" waypoints="[{location:'kingston', stopover:true}]"
                     origin="current-location" destination="">
                 </directions>
-                <marker id="start" 
-                    position="44.9852, 93.2765">
-                    <!-- <div> Start Here </div> -->
-            </marker>
-                <marker id="end" 
-                    position="44.9648, 93.1827">
-                    <!-- <div> Ends Here </div> -->
-                </marker>
             </bicycling-layer>
         </ng-map>
+
+
         <div id="directions-panel" style="width: 28%; float:left; height: 100%; overflow: auto; padding: 0px 5px">
-            </div>
+        </div>
     </div>
 
-    <form>
-        <div>
-            <label for="startingDestination">Starting destination:</label>
-            <input type="text" />
-        </div>
-        <div>
-            <label for="startingDestination">Ending destination:</label>
-            <input type="text" />
-        </div>
-        <div>
-            <button for="startDirections">Start Your Ride</button>
-        </div>
-    </form>
+
+
+
 
 </div>

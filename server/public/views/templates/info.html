@@ -7,10 +7,13 @@
                   <!-- refer to ng material documentation on how to sort table (md-sort) -->
                   <tr>
                         <th>Breweries</th>
+                        <th>City</th>                        
                         <th></th>
                   </tr>
                   <tr ng-repeat="brewery in ic.allBreweriesObj.brew">
                         <td>{{brewery.breweryname}}</td>
+                        <td>{{brewery.city}}</td>
+
                         <!-- add toggle piece to show which ones are *already* on the favs list -->
                         <td><button id="add" ng-click="ic.addFavorites(brewery);">Add to Favorites</button></td>
                   </tr>

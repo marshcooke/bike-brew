@@ -1,15 +1,16 @@
 var express = require('express');
 var router = express.Router();
+var pool = require('../modules/pool.js');
 
 // Handles Ajax request for user information if user is authenticated
-router.get('/', function(req, res) {
+router.get('/', function (req, res) {
   console.log('get /user route');
   // check if logged in
-  if(req.isAuthenticated()) {
+  if (req.isAuthenticated()) {
     // send back user object from database
     console.log('logged in', req.user);
     var userInfo = {
-      username : req.user.username
+      username: req.user.username
     };
     res.send(userInfo);
   } else {
@@ -21,7 +22,7 @@ router.get('/', function(req, res) {
 });
 
 // clear all server session information about this user
-router.get('/logout', function(req, res) {
+router.get('/logout', function (req, res) {
   // Use passport's built-in method to log out the user
   console.log('Logged out');
   req.logOut();
@@ -31,7 +32,7 @@ router.get('/logout', function(req, res) {
 router.get('/favorite', function (req, res) {
   if (req.isAuthenticated()) {
     console.log('user is logged in');
-    // console.log('in get / function, req.body: ', req.body);
+    console.log('in get / map favorite function');
     var userId = req.user.id;
     console.log('user id? ', userId);
     pool.connect(function (connectionError, client, done) {
