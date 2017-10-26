@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var pool = require('../modules/pool.js');
 
+var routes = [];
+
 // Handles Ajax request for user information if user is authenticated
 router.get('/', function (req, res) {
   console.log('get /user route');
@@ -29,6 +31,7 @@ router.get('/logout', function (req, res) {
   res.sendStatus(200);
 });
 
+// adds favorited breweries' lat/long position on the map 
 router.get('/favorite', function (req, res) {
   if (req.isAuthenticated()) {
     console.log('user is logged in');
@@ -58,5 +61,17 @@ router.get('/favorite', function (req, res) {
   }
 });
 
+
+router.get('/map/route', function (req,res) {
+  console.log('in get /route');
+  res.send(routes);
+});
+
+router.post('/', function (req,res) {
+  console.log('in post /route');
+  routes.push(req.body.routeOrigin);
+  routes.push(req.body.destName);
+  res.sendStatus(200);
+});
 
 module.exports = router;
