@@ -19,24 +19,7 @@ myApp.controller('MapController', function (UserService, NgMap, $http) {
   }
   vm.mapFavorites();
 
-  vm.addRoute = function() {
-    console.log('in vm.routeIn addRoute: ', vm.routeIn);
-    console.log('in vm.destIn addRoute: ', vm.destIn);
-    vm.routes.push(vm.routeIn);
-    vm.routes.push(vm.destIn);
-    $http({
-      method: 'POST',
-      url: '/',
-      data: {
-        routeOrigin: vm.routeIn, 
-        destName: vm.destIn
-      }
-    }).then(function(response) {
-      console.log('post response is:', response);
-      vm.getRoutes();
-    });
-  };
-
+  //establishing route and direction pieces on map
   vm.getRoutes = function() {
     $http({
       type: 'GET',

@@ -61,17 +61,10 @@ router.get('/favorite', function (req, res) {
   }
 });
 
-
+//part of the map route/direction connection
 router.get('/map/route', function (req,res) {
   console.log('in get /route');
   res.send(routes);
-});
-
-router.post('/', function (req,res) {
-  console.log('in post /route');
-  routes.push(req.body.routeOrigin);
-  routes.push(req.body.destName);
-  res.sendStatus(200);
 });
 
 module.exports = router;

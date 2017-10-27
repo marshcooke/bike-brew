@@ -2,12 +2,11 @@
 <div class="container">
 
     <h1>Choose your destination!</h1>
-    <div ng-init="mc.getRoutes()">
+    <div >
 
         <!-- does the ng-init need to go on the div instead to incompass the {{}} section in the directions (outside the form) -->
-        <form >
+        <form ng-init="mc.getRoutes()">
             <div>
-                <!-- ADD IN GOOGLE PLACES TO FILL IN THE BLANK IN THE SEARCH BAR LIKE ABDI SENT -->
                 <label for="startingLocation">Starting location:</label>
                 <input type="text" ng-model="mc.routeIn" places-auto-complete size=40 component-restrictions=country: us>
             </div>
@@ -15,12 +14,10 @@
                 <label for="endingDestination">Ending destination:</label>
                 <input type="text" ng-model="mc.destIn" places-auto-complete size=40 component-restrictions=country: us>
             </div>
-            <div>
-                <button for="routeButton" ng-click="mc.addRoute()">Start Your Ride</button>
-            </div>
         </form>
 
-        <ng-map id="map" zoom="12" center="44.9675,-93.2010">
+        <ng-map id="map" zoom="12" center="44.964343,-93.197984">
+            <bicycling-layer>
                 <directions
                 draggable="true"
                 panel="directions-panel"
@@ -28,9 +25,9 @@
                 origin="{{mc.routeIn}}"
                 destination="{{mc.destIn}}">
               </directions>
-              <bicycling-layer>
-                </bicycling-layer>
-            <marker  ng-repeat="marker in mc.mapFavoritesObj.list" title="{{marker.breweryname}}" position="{{marker.latitude}},{{marker.longitude}}"></marker>
+            <marker ng-repeat="marker in mc.mapFavoritesObj.list" title="{{marker.breweryname}}" position="{{marker.latitude}},{{marker.longitude}}"></marker>
+        </bicycling-layer>
+        
         </ng-map>
 
         <div id="directions-panel" style="width: 28%; float:left; height: 100%; overflow: auto; padding: 0px 5px">
