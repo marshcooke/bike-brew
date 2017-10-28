@@ -5,7 +5,7 @@
     <div >
 
         <!-- does the ng-init need to go on the div instead to incompass the {{}} section in the directions (outside the form) -->
-        <form ng-init="mc.getRoutes()">
+        <form ng-init="mc.getRoutes()" class="map-form">
             <div>
                 <input placeholder="Starting location" type="text" ng-model="mc.routeIn" places-auto-complete size=40 component-restrictions=country: us>
             </div>
@@ -13,7 +13,7 @@
                 <input placeholder="End destination" type="text" ng-model="mc.destIn" places-auto-complete size=40 component-restrictions=country: us>
             </div>
         </form>
-
+    </br>
         <ng-map id="map" zoom="11" center="44.981539,-93.190526" >
             <bicycling-layer>
                 <directions
@@ -27,11 +27,9 @@
         </bicycling-layer>
         </ng-map>
 
-        <div id="directions-panel" style="width: %; float:left; height: 100%; overflow: auto; padding: 0px 5px">
+        <div id="directions-panel" style="float:left; height: 100%; overflow: auto; padding: 0px 5px">
         </div>
     </div>
-
-
 
 
 
