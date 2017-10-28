@@ -67,6 +67,10 @@ li {
   font-weight: bold;
 }
 
+li:last-child {
+  float: right;
+}
+
 li a {
   display: block;
   color: white;
@@ -75,7 +79,6 @@ li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
   text-decoration: none;
   font-weight: bold;
