@@ -5,13 +5,22 @@ myApp.config(function($routeProvider, $locationProvider) {
   $locationProvider.hashPrefix('');
   console.log('myApp -- config')
   $routeProvider
-    .when('/home', {
-      templateUrl: '/views/templates/home.html',
+    .when('/login', {
+      templateUrl: '/views/templates/login.html',
       controller: 'LoginController as lc',
     })
     .when('/register', {
       templateUrl: '/views/templates/register.html',
       controller: 'LoginController as lc'
+    })
+    .when('/home', {
+      templateUrl: '/views/templates/home.html',
+      controller: 'UserController as uc',
+      resolve: {
+        getuser : function(UserService){
+          return UserService.getuser();
+        }
+      }
     })
     .when('/user', {
       templateUrl: '/views/templates/user.html',
@@ -41,6 +50,6 @@ myApp.config(function($routeProvider, $locationProvider) {
       }
     })
     .otherwise({
-      redirectTo: 'home'
+      redirectTo: 'login'
     });
 });
