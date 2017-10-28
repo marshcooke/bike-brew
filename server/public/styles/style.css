@@ -6,6 +6,10 @@ body, html {
   background-color: #F3EEFF;
 }
 
+.header {
+  color: #702A2A;
+}
+
 .instructions .container h1 {
   font-size: 32px;
   font-weight: 600;
@@ -15,6 +19,24 @@ body, html {
   background-color: #F3EEFF;
   color: #702A2A;
   padding: 15px;
+}
+
+#reg-login-header {
+  color: #F3EEFF;
+}
+
+#register-login {
+  background-color: #856BBA;
+  color: #F3EEFF;
+  padding: 15px; 
+}
+
+#register-cancel {
+  color: #702A2A;
+}
+
+.reg-log-form * {
+  margin-bottom: 4px;  
 }
 
 #entryForm {
@@ -83,4 +105,8 @@ li a:hover {
   text-decoration: none;
   font-weight: bold;
   color: #FBCCCC;
+}
+
+h1 {
+  color: forestgreen;
 }
