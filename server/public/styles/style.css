@@ -32,7 +32,7 @@ body, html {
 }
 
 #register-cancel {
-  color: #702A2A;
+  color: #DAACAC;
 }
 
 .reg-log-form * {
@@ -116,4 +116,8 @@ li a:hover {
 h1 {
   padding: 10px;
   color: forestgreen;
+}
+
+table {
+  padding: 28px;
 }
