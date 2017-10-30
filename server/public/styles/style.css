@@ -121,3 +121,7 @@ h1 {
 table {
   padding: 28px;
 }
+
+#home-thanks-div * {
+  margin-left: 4px;  
+}

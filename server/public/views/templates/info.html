@@ -10,7 +10,7 @@
                         <th>City</th>                        
                         <th></th>
                   </tr>
-                  <tr ng-repeat="brewery in ic.allBreweriesObj.brew">
+                  <tr ng-repeat="brewery in ic.allBreweriesObj.brew | orderBy: 'breweryname'">
                         <td>{{brewery.breweryname}}</td>
                         <td>{{brewery.city}}</td>
 
