@@ -11,9 +11,9 @@ breweryname text,
 streetaddress text,
 city text, 
 state varchar(2), 
-zip numeric(9),
-latitude numeric(15,4),
-longitude numeric(15,4)
+zip numeric(9, 0),
+latitude numeric(12,9),
+longitude numeric(12,9)
 );
 
 CREATE TABLE users_breweries (

@@ -49,6 +49,10 @@ myApp.config(function($routeProvider, $locationProvider) {
         }
       }
     })
+    .when('/thanks', {
+      templateUrl: '/views/templates/thanks.html'
+      // I removed the controller as to ensure this page would show at the end of my presentation. 
+    })
     .otherwise({
       redirectTo: 'login'
     });

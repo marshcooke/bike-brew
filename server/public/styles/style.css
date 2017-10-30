@@ -115,13 +115,34 @@ li a:hover {
 
 h1 {
   padding: 10px;
-  color: forestgreen;
+  color: #702A2A;
 }
 
 table {
   padding: 28px;
 }
 
-#home-thanks-div * {
-  margin-left: 4px;  
+#home-thanks-div {
+  margin-left: 8px;  
+  margin-right: 60px;  
+  padding: 10px;
+}
+
+#link-style a {
+  text-decoration: none;
+}
+
+#link-style a:hover {
+  text-decoration: none;
+  color: #675192;
+}
+
+.column {
+  column-count: 3;
+  column-gap: 8px;  
+}
+
+h4 {
+  margin-top: 2px;
+  margin-bottom: -12px;
 }
