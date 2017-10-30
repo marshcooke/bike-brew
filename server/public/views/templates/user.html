@@ -13,7 +13,7 @@
             <tr ng-repeat="favorite in uc.allFavoritesObj.favorite |  orderBy: 'breweryname'">
                 <td>{{favorite.breweryname}}</td>
                 <td>{{favorite.city}}</td>
-                <td><button id="delete" ng-click="uc.deleteFavorites(favorite.breweries_id)">Remove from Favorites</button></td>
+                <td><button id="delete" class="btn btn-default" ng-click="uc.deleteFavorites(favorite.breweries_id)">Remove from Favorites</button></td>
             </tr>
         </table>
     </div>

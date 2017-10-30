@@ -39,6 +39,10 @@ body, html {
   margin-bottom: 4px;  
 }
 
+.reg-log-form input {
+  color: black;
+}
+
 .map-form * {
   margin-bottom: 4px;  
   margin-left: 10px;
@@ -145,4 +149,8 @@ table {
 h4 {
   margin-top: 2px;
   margin-bottom: -12px;
+}
+
+table {
+  margin-top: 2px;
 }
