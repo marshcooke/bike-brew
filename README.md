@@ -52,7 +52,9 @@ High level list of items completed.
 
 Features that you would like to add at some point in the future.
 
-- [ ] Feature c
+- [ ] Mobile responsive design
+- [ ] Add and expand information within the brewery database
+- [ ] More dynamic interaction between brewery information and map 
 
 ## Deployment
 
@@ -60,9 +62,12 @@ Add additional notes about how to deploy this on a live system
 
 ## Authors
 
-* Name of author(s)
+* Sarah Cooke
 
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
+* Passport initial set up thanks to Prime instructors
+* ng-map guidance from Jen Show, Abdi Suleman, and Tom Ritland
+* Shoutout to my beer loving friend Alex Hand for SQL support
+* Thanks to beer and bike loving comrade on the adventure Katie Campbell
