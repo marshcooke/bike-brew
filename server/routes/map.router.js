@@ -6,7 +6,7 @@ var routes = [];
 
 // Handles Ajax request for user information if user is authenticated
 router.get('/', function (req, res) {
-  console.log('get /user route');
+  console.log('get /favorites route');
   // check if logged in
   if (req.isAuthenticated()) {
     // send back user object from database

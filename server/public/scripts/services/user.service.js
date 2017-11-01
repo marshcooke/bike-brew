@@ -10,7 +10,7 @@ myApp.service('UserService', function ($http, $location) {
 
   self.getuser = function () {
     console.log('UserService -- getuser');
-    $http.get('/user').then(function (response) {
+    $http.get('/favorites').then(function (response) {
       if (response.data.username) {
         // user has a curret session on the server
         self.userObject.userName = response.data.username;
@@ -28,7 +28,7 @@ myApp.service('UserService', function ($http, $location) {
 
   self.logout = function () {
     console.log('UserService -- logout');
-    $http.get('/user/logout').then(function (response) {
+    $http.get('/favorites/logout').then(function (response) {
       console.log('UserService -- logout -- logged out');
       $location.path("/login");
     });
@@ -57,7 +57,7 @@ myApp.service('UserService', function ($http, $location) {
   self.getFavorites = function () {
     $http({
       method: 'GET',
-      url: '/user/favorite'
+      url: '/favorites/favorite'
     }).then(function (response) {
       console.log('response is: ', response);
       self.allFavoritesObj.favorite = response.data;
