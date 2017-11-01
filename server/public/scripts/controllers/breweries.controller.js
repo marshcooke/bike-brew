@@ -1,5 +1,5 @@
-myApp.controller('InfoController', function(UserService) {
-  console.log('InfoController created');
+myApp.controller('BreweriesController', function(UserService) {
+  console.log('BreweriesController created');
   var vm = this;
 
   vm.allBreweriesObj = UserService.allBreweriesObj;  

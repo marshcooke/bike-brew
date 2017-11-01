@@ -15,25 +15,25 @@ myApp.config(function($routeProvider, $locationProvider) {
     })
     .when('/home', {
       templateUrl: '/views/templates/home.html',
-      controller: 'UserController as uc',
+      controller: 'FavoritesController as fc',
       resolve: {
         getuser : function(UserService){
           return UserService.getuser();
         }
       }
     })
-    .when('/user', {
-      templateUrl: '/views/templates/user.html',
-      controller: 'UserController as uc',
+    .when('/favorites', {
+      templateUrl: '/views/templates/favorites.html',
+      controller: 'FavoritesController as fc',
       resolve: {
         getuser : function(UserService){
           return UserService.getuser();
         }
       }
     })
-    .when('/info', {
-      templateUrl: '/views/templates/info.html',
-      controller: 'InfoController as ic',
+    .when('/breweries', {
+      templateUrl: '/views/templates/breweries.html',
+      controller: 'BreweriesController as bc',
       resolve: {
         getuser : function(UserService){
           return UserService.getuser();

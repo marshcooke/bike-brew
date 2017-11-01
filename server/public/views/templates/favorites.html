@@ -1,18 +1,18 @@
 <div ng-include="'views/partials/nav.html'"></div>
 <div class="container">
-    <h1>{{uc.userObject.userName}}, here are your favorite breweries:</h1>
+    <h1>{{fc.userObject.userName}}, here are your favorite breweries:</h1>
     <!-- <button class="btn btn-default" ng-click="uc.userService.logout()">Log Out</button> -->
-    <div class="container" ng-init="uc.getFavorites()">
+    <div class="container" ng-init="fc.getFavorites()">
         <table>
             <tr>
                 <th>Favorite Breweries</th>
                 <th>City</th>
                 <th></th>
             </tr>
-            <tr ng-repeat="favorite in uc.allFavoritesObj.favorite |  orderBy: 'breweryname'">
+            <tr ng-repeat="favorite in fc.allFavoritesObj.favorite |  orderBy: 'breweryname'">
                 <td>{{favorite.breweryname}}</td>
                 <td>{{favorite.city}}</td>
-                <td><button id="delete" class="btn btn-default" ng-click="uc.deleteFavorites(favorite.breweries_id)">Remove from Favorites</button></td>
+                <td><button id="delete" class="btn btn-default" ng-click="fc.deleteFavorites(favorite.breweries_id)">Remove from Favorites</button></td>
             </tr>
         </table>
     </div>

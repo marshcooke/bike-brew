@@ -6,7 +6,7 @@ BikeBrewMN is a web application combining biking and breweries in Minnesota. The
 
 ## Built With
 
-SEAN stack, Passport, ng-map, Bootstrap
+SEAN stack, Passport, ng-map, Bootstrap, FontAwesome Icons
 
 ## Getting Started
 

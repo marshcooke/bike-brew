@@ -7,10 +7,10 @@ var sessionConfig = require('./modules/session.config');
 
 // Route includes
 var indexRouter = require('./routes/index.router');
-var userRouter = require('./routes/user.router');
+var favoritesRouter = require('./routes/favorites.router');
 var registerRouter = require('./routes/register.router');
 var mapRouter = require('./routes/map.router');
-var breweryRouter = require('./routes/breweries.router.js');
+var breweryRouter = require('./routes/breweries.router');
 
 var port = process.env.PORT || 6172;
 
@@ -30,7 +30,7 @@ app.use(passport.session());
 
 // Routes
 app.use('/register', registerRouter);
-app.use('/user', userRouter);
+app.use('/favorites', favoritesRouter);
 app.use('/map', mapRouter);
 app.use('/breweries', breweryRouter);
 

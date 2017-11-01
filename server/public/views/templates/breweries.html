@@ -1,5 +1,5 @@
 <div ng-include="'views/partials/nav.html'"></div>
-<div class="container" ng-init="ic.getBreweries()">
+<div class="container" ng-init="bc.getBreweries()">
       <h1>Select breweries to add to your list of favorites!</h1>
       <div>
             <table>
@@ -10,12 +10,12 @@
                         <th>City</th>                        
                         <th></th>
                   </tr>
-                  <tr ng-repeat="brewery in ic.allBreweriesObj.brew | orderBy: 'breweryname'">
+                  <tr ng-repeat="brewery in bc.allBreweriesObj.brew | orderBy: 'breweryname'">
                         <td>{{brewery.breweryname}}</td>
                         <td>{{brewery.city}}</td>
 
                         <!-- add toggle piece to show which ones are *already* on the favs list -->
-                        <td><button class="btn btn-default" id="add" ng-click="ic.addFavorites(brewery);">Add to Favorites</button></td>
+                        <td><button class="btn btn-default" id="add" ng-click="bc.addFavorites(brewery);">Add to Favorites</button></td>
                   </tr>
             </table>
       </div>
