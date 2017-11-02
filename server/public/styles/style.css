@@ -134,11 +134,12 @@ table {
 
 #link-style a {
   text-decoration: none;
+  color: #856BBA;
 }
 
 #link-style a:hover {
   text-decoration: none;
-  color: #675192;
+  color: #3B295E;
 }
 
 .column {
@@ -153,4 +154,8 @@ h4 {
 
 table {
   margin-top: 2px;
+}
+
+#home-coloring {
+  color: #702A2A;
 }
