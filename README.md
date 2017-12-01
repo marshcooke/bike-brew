@@ -20,17 +20,17 @@ SEAN stack (AngularJS, ExpressJS, Node.JS, PostgreSQL), Passport, ng-map, Bootst
 ## Screen Shot
 
 - Homepage
-![Homepage](/public/images/homepage.png "Homepage")
+![Homepage](./public/images/homepage.png "Homepage")
 - Minnesota Breweries
-![Minnesota Breweries](/public/images/mn-breweries.png "Minnesota Breweries")
+![Minnesota Breweries](./public/images/mn-breweries.png "Minnesota Breweries")
 - Favorite Breweries
-![Favorite Breweries](/public/images/favorite-breweries.png "Favorite Breweries")
+![Favorite Breweries](./public/images/favorite-breweries.png "Favorite Breweries")
 - Map
-![Map](/public/images/map.png "Map")
+![Map](./public/images/map.png "Map")
 - Mapped Directions
-![Mapped Directions](/public/images/map-directions.png "Mapped Directions")
+![Mapped Directions](./public/images/map-directions.png "Mapped Directions")
 - Directions
-![Directions](/public/images/directions.png "Directions")
+![Directions](./public/images/directions.png "Directions")
 
 ### Completed Features
 
