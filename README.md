@@ -6,59 +6,50 @@ BikeBrewMN is a web application combining biking and breweries in Minnesota. The
 
 ## Built With
 
-SEAN stack, Passport, ng-map, Bootstrap, FontAwesome Icons
-
-## Getting Started
-
-[ ] These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+SEAN stack (AngularJS, ExpressJS, Node.JS, PostgreSQL), Passport, ng-map, Bootstrap, FontAwesome Icons
 
 ### Prerequisites
 
-[ ] Link to software that is required to install the app (e.g. node).
-
 - [Node.js](https://nodejs.org/en/)
-- List other prerequisites here
-
+- npm install dependencies
 
 ### Installing
 
-[ ] Steps to get the development environment running.
-See sqlstuff.sql 
-
-```sql
-CREATE TABLE "users" (
-  "id" serial primary key,
-  "username" varchar(80) not null UNIQUE,
-  "password" varchar(240) not null
-);
-```
+- Execute the ```sqlstuff.sql``` file to find the base of the database. However, the data will not automatically populate. 
 
 ## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused.
-
-## Documentation
-
-Link to a read-only version of your scope document or other relevant documentation here (optional). Remove if unused.
+- Homepage
+![Homepage](/public/images/homepage.png "Homepage")
+- Minnesota Breweries
+![Minnesota Breweries](/public/images/mn-breweries.png "Minnesota Breweries")
+- Favorite Breweries
+![Favorite Breweries](/public/images/favorite-breweries.png "Favorite Breweries")
+- Map
+![Map](/public/images/map.png "Map")
+- Mapped Directions
+![Mapped Directions](/public/images/map-directions.png "Mapped Directions")
+- Directions
+![Directions](/public/images/directions.png "Directions")
 
 ### Completed Features
 
 High level list of items completed.
 
-- [x] Feature a
-- [x] Feature b
+- [x] Curated database with Minnesota Brewery names and cities
+- [X] Ability for users to select their favorite Minnesota Breweries
+- [X] Users easily see where their favorite breweries are on a map
+- [X] Users search for bike routes between two locations and are able to see where the route will lead them with an overlay of their favorite breweries 
+- [X] Users are able to adjust their route by dragging the determined route; directions automatically update
+- [X] Turn-by-turn bicylce directions are available for users
 
 ### Next Steps
 
 Features that you would like to add at some point in the future.
 
 - [ ] Mobile responsive design
-- [ ] Add and expand information within the brewery database
+- [ ] Expand information within the brewery database (open hours, website, social media, etc.)
 - [ ] More dynamic interaction between brewery information and map 
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Authors
 
