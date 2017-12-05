@@ -159,3 +159,24 @@ table {
 #home-coloring {
   color: #702A2A;
 }
+
+.footer {
+  background-color: #856BBA;
+  width: 100%;
+  border-radius: 0px;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#footer-style a {
+  text-decoration: none;
+  color: white;
+}
+
+#footer-style a:hover {
+  text-decoration: none;
+  color: #FBCCCC;
+}
