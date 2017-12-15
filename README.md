@@ -34,7 +34,7 @@ SEAN stack (AngularJS, ExpressJS, Node.JS, PostgreSQL), Passport, ng-map, Bootst
 
 ### Completed Features
 
-High level list of items completed.
+High level list of items completed:
 
 - [x] Curated database with Minnesota Brewery names and cities
 - [X] Ability for users to select their favorite Minnesota Breweries
@@ -45,7 +45,7 @@ High level list of items completed.
 
 ### Next Steps
 
-Features that you would like to add at some point in the future.
+Features that you would like to add at some point in the future:
 
 - [ ] Mobile responsive design
 - [ ] Expand information within the brewery database (open hours, website, social media, etc.)
@@ -56,10 +56,9 @@ Features that you would like to add at some point in the future.
 
 * Sarah Cooke
 
-
 ## Acknowledgments
 
 * Passport initial set up thanks to Prime instructors
-* ng-map guidance from Jen Show, Abdi Suleman, and Tom Ritland
-* Shoutout to my beer loving friend Alex Hand for SQL support
-* Thanks to beer and bike loving comrade on the adventure Katie Campbell
+* ng-map guidance from [Jen Show](https://github.com/jdshow), [Abdi Suleman](https://github.com/abdisuleman12), and [Tom Ritland](https://github.com/tritland)
+* Shoutout to my beer loving friend [Alex Hand](https://github.com/AlexJHand) for SQL and Brewery support
+* Thanks to beer and bike loving comrade on the adventure [Katie Campbell](https://github.com/katyasoup)
