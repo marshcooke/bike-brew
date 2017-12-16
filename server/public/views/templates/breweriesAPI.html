@@ -1,0 +1,24 @@
+<!-- <div ng-include="'views/partials/nav.html'"></div> -->
+<div class="container" ng-init="ac.getBreweries()">
+      <h1>Select breweries to add to your list of favorites!</h1>
+      <div>
+            <table>
+                  <!-- use md-card and table class -->
+                  <!-- refer to ng material documentation on how to sort table (md-sort) -->
+                  <tr>
+                        <th>Breweries</th>
+                        <th>City</th>                        
+                        <th></th>
+                  </tr>
+                  <tr ng-repeat="brewery in bc.allBreweriesObj.brew | orderBy: 'breweryname'">
+                        <td>{{brewery.breweryname}}</td>
+                        <td>{{brewery.city}}</td>
+
+                        <!-- add toggle piece to show which ones are *already* on the favs list -->
+                        <td><button class="btn btn-default" id="add" ng-click="bc.addFavorites(brewery);">Add to Favorites</button></td>
+                  </tr>
+            </table>
+      </div>
+
+</div> 
+<!-- <div ng-include="'views/partials/footer.html'"></div> -->
