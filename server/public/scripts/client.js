@@ -40,7 +40,17 @@ myApp.config(function($routeProvider, $locationProvider) {
         }
       }
     })
-    .when('/map', {
+// FOR API USE
+    .when('/breweriesAPI', {
+      templateUrl: '/views/templates/breweriesAPI.html',
+      controller: 'ApiController as ac',
+      resolve: {
+        getuser : function(UserService){
+          return UserService.getuser();
+        }
+      }
+    })
+      .when('/map', {
       templateUrl: '/views/templates/map.html',
       controller: 'MapController as mc',
       resolve: {

@@ -13,6 +13,6 @@ myApp.controller('ApiController', function(UserService) {
     vm.addFavorites = function(brewery) {
       UserService.addFavorites(brewery);
   
-      console.log('add favorites hit in ic')
+      console.log('add favorites hit in ac')
     }
   });
