@@ -4,6 +4,8 @@ BikeBrewMN is a web application combining biking and breweries in Minnesota. The
 
 [ ] Link to the live version of the app if it's hosted on Heroku.
 
+[Take a look at my project scope here](https://docs.google.com/document/d/1RVb7cJbX4B_1CxbWtwK6yrFTSbYnUJyGIuLqZl9dS1c/edit?usp=sharing)
+
 ## Built With
 
 SEAN stack (AngularJS, ExpressJS, Node.JS, PostgreSQL), Passport, ng-map, Bootstrap, FontAwesome Icons
