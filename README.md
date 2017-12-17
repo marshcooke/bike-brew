@@ -44,6 +44,7 @@ High level list of items completed:
 - [X] Users search for bike routes between two locations and are able to see where the route will lead them with an overlay of their favorite breweries 
 - [X] Users are able to adjust their route by dragging the determined route; directions automatically update
 - [X] Turn-by-turn bicylce directions are available for users
+- [X] Users are able to interact with with BikeBrewMN through social media
 
 ### Next Steps
 
