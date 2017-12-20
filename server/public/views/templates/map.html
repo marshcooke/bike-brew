@@ -16,6 +16,12 @@
             </div>
         </form>
         </br>
+        <!-- Write in a function to populate this message when both mc.routeIn and mc.destIN are complete -->
+        <p>
+            Once your course is defined, you can include more breweries & stops along your planned itinerary by dragging the provided
+            route!
+        </p>
+        </br>
         <ng-map id="map" zoom="11" center="44.981539,-93.190526">
             <bicycling-layer>
                 <directions draggable="true" panel="directions-panel" travel-mode="BICYCLING" origin="{{mc.routeIn}}" destination="{{mc.destIn}}">
@@ -29,7 +35,7 @@
         &nbsp;
 
     </div>
-    &nbsp;    
+    &nbsp;
 
 
 </div>
