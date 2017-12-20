@@ -127,8 +127,8 @@ table {
 }
 
 #home-thanks-div {
-  margin-left: 8px;  
-  margin-right: 60px;  
+  margin-left: 25px;  
+  margin-right: 40px;  
   padding: 10px;
 }
 
@@ -179,4 +179,8 @@ table {
 #footer-style a:hover {
   text-decoration: none;
   color: #FBCCCC;
+}
+
+label {
+  width: 80px;
 }
