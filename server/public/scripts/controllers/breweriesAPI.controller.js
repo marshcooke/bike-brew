@@ -6,13 +6,11 @@ myApp.controller('ApiController', function(UserService) {
   
     vm.getBreweries = function() {
       UserService.getBreweries();
-          
       console.log('brews: ', vm.allBreweriesObj);
     }
     
     vm.addFavorites = function(brewery) {
       UserService.addFavorites(brewery);
-  
       console.log('add favorites hit in ac')
     }
   });

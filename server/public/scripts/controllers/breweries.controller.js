@@ -5,14 +5,12 @@ myApp.controller('BreweriesController', function(UserService) {
   vm.allBreweriesObj = UserService.allBreweriesObj;  
 
   vm.getBreweries = function() {
-    UserService.getBreweries();
-        
+    UserService.getBreweries();   
     console.log('brews: ', vm.allBreweriesObj);
   }
   
   vm.addFavorites = function(brewery) {
     UserService.addFavorites(brewery);
-
     console.log('add favorites hit in ic')
   }
 });

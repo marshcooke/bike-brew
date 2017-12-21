@@ -7,9 +7,6 @@ myApp.controller('LoginController', function($http, $location, UserService) {
     };
     vm.message = '';
 
-
-
-
     vm.login = function() {
       console.log('LoginController -- login');
       if(vm.user.username === '' || vm.user.password === '') {

@@ -10,8 +10,7 @@ myApp.controller('MapController', function (UserService, NgMap, $http) {
   NgMap.getMap('map').then(function (map) {
     console.log('map init in map controller');
     self.map = map;
-    //ask jen later about more info on making them fit in the window
-  })
+  });
 
   vm.mapFavorites = function () {
     UserService.mapFavorites();
@@ -28,5 +27,4 @@ myApp.controller('MapController', function (UserService, NgMap, $http) {
       vm.routes = response.data;
     });
   };
-
 });
