@@ -7,7 +7,7 @@
                   <!-- refer to ng material documentation on how to sort table (md-sort) -->
                   <tr>
                         <th>Breweries</th>
-                        <th>City</th>                        
+                        <th>City</th>
                         <th></th>
                   </tr>
                   <tr ng-repeat="brewery in bc.allBreweriesObj.brew | orderBy: 'breweryname'">
@@ -20,5 +20,5 @@
             </table>
       </div>
 
-</div> 
+</div>
 <div ng-include="'views/partials/footer.html'"></div>
