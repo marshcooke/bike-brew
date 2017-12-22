@@ -62,7 +62,7 @@ router.get('/favorite', function (req, res) {
 });
 
 //part of the map route/direction connection
-router.get('/map/route', function (req,res) {
+router.get('/map/route', function (req, res) {
   console.log('in get /route');
   res.send(routes);
 });

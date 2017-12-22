@@ -1,4 +1,4 @@
-myApp.controller('FavoritesController', function(UserService) {
+myApp.controller('FavoritesController', function (UserService) {
   console.log('FavoritesController created');
   var vm = this;
   vm.userService = UserService;
@@ -6,17 +6,17 @@ myApp.controller('FavoritesController', function(UserService) {
 
   vm.allFavoritesObj = UserService.allFavoritesObj;
 
-  vm.getFavorites = function() {
+  vm.getFavorites = function () {
     UserService.getFavorites();
     // vm.allFavoritesObj = UserService.allFavoritesObj;
     console.log('favorites: ', vm.allFavoritesObj);
   }
 
-  vm.deleteFavorites = function(brewery) {
+  vm.deleteFavorites = function (brewery) {
     UserService.deleteFavorites(brewery);
     // vm.allFavoritesObj = UserService.allFavoritesObj;
     console.log('delete favorites hit in uc')
     vm.getFavorites();
   }
-  
+
 });

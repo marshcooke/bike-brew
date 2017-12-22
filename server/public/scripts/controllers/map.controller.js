@@ -14,16 +14,16 @@ myApp.controller('MapController', function (UserService, NgMap, $http) {
 
   vm.mapFavorites = function () {
     UserService.mapFavorites();
-    console.log('map favorites: ', vm.mapFavoritesObj); 
+    console.log('map favorites: ', vm.mapFavoritesObj);
   }
   vm.mapFavorites();
 
   //establishing route and direction pieces on map
-  vm.getRoutes = function() {
+  vm.getRoutes = function () {
     $http({
       type: 'GET',
       url: '/route'
-    }).then(function(response) {
+    }).then(function (response) {
       vm.routes = response.data;
     });
   };
