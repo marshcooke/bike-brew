@@ -57,5 +57,4 @@ router.get('/favorite', function (req, res) {
   }
 });
 
-
 module.exports = router;
