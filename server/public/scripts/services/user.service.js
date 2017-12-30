@@ -41,7 +41,7 @@ myApp.service('UserService', function ($http, $location) {
     }).then(function (response) {
       console.log('response is: ', response.data);
       self.allBreweriesObj.brew = response.data;
-    })
+    });
   }
 
   self.addFavorites = function (brewery) {
@@ -51,7 +51,7 @@ myApp.service('UserService', function ($http, $location) {
       data: [brewery]
     }).then(function (response) {
       console.log('post response is: ', response);
-    })
+    });
   }
 
   self.getFavorites = function () {
@@ -61,7 +61,7 @@ myApp.service('UserService', function ($http, $location) {
     }).then(function (response) {
       console.log('response is: ', response);
       self.allFavoritesObj.favorite = response.data;
-    })
+    });
   }
 
   self.deleteFavorites = function (brewery) {
@@ -70,7 +70,7 @@ myApp.service('UserService', function ($http, $location) {
       url: '/breweries/' + brewery,
     }).then(function (response) {
       console.log('delete response is: ', response.data);
-    })
+    });
   }
 
   self.mapFavorites = function () {
@@ -82,7 +82,7 @@ myApp.service('UserService', function ($http, $location) {
       self.mapFavoritesObj.list = response.data;
       console.log('get map favs response is: ', self.mapFavoritesObj);
       
-    })
+    });
   }
 
 });
