@@ -1,5 +1,5 @@
 myApp.controller('MapController', function (UserService, NgMap, $http) {
-  console.log('MapController created');
+  // console.log('MapController created');
   var vm = this;
   vm.userService = UserService;
 
@@ -8,13 +8,13 @@ myApp.controller('MapController', function (UserService, NgMap, $http) {
   vm.mapFavoritesObj = UserService.mapFavoritesObj
 
   NgMap.getMap('map').then(function (map) {
-    console.log('map init in map controller');
+    // console.log('map init in map controller');
     self.map = map;
   });
 
   vm.mapFavorites = function () {
     UserService.mapFavorites();
-    console.log('map favorites: ', vm.mapFavoritesObj);
+    // console.log('map favorites: ', vm.mapFavoritesObj);
   }
   vm.mapFavorites();
 
