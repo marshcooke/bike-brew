@@ -1,5 +1,5 @@
 myApp.service('UserService', function ($http, $location) {
-  console.log('UserService Loaded');
+  // console.log('UserService Loaded');
 
   var self = this;
 
@@ -9,27 +9,27 @@ myApp.service('UserService', function ($http, $location) {
   self.mapFavoritesObj = {list: []};
 
   self.getuser = function () {
-    console.log('UserService -- getuser');
+    // console.log('UserService -- getuser');
     $http.get('/favorites').then(function (response) {
       if (response.data.username) {
         // user has a curret session on the server
         self.userObject.userName = response.data.username;
-        console.log('UserService -- getuser -- User Data: ', self.userObject.userName);
+        // console.log('UserService -- getuser -- User Data: ', self.userObject.userName);
       } else {
-        console.log('UserService -- getuser -- failure');
+        // console.log('UserService -- getuser -- failure');
         // user has no session, bounce them back to the login page
         $location.path("/login");
       }
     }, function (response) {
-      console.log('UserService -- getuser -- failure: ', response);
+      // console.log('UserService -- getuser -- failure: ', response);
       $location.path("/login");
     });
   }
 
   self.logout = function () {
-    console.log('UserService -- logout');
+    // console.log('UserService -- logout');
     $http.get('/favorites/logout').then(function (response) {
-      console.log('UserService -- logout -- logged out');
+      // console.log('UserService -- logout -- logged out');
       $location.path("/login");
     });
   }
@@ -39,7 +39,7 @@ myApp.service('UserService', function ($http, $location) {
       method: 'GET',
       url: '/breweries'
     }).then(function (response) {
-      console.log('response is: ', response.data);
+      // console.log('response is: ', response.data);
       self.allBreweriesObj.brew = response.data;
     });
   }
@@ -50,7 +50,7 @@ myApp.service('UserService', function ($http, $location) {
       url: '/breweries',
       data: [brewery]
     }).then(function (response) {
-      console.log('post response is: ', response);
+      // console.log('post response is: ', response);
     });
   }
 
@@ -59,7 +59,7 @@ myApp.service('UserService', function ($http, $location) {
       method: 'GET',
       url: '/favorites/favorite'
     }).then(function (response) {
-      console.log('response is: ', response);
+      // console.log('response is: ', response);
       self.allFavoritesObj.favorite = response.data;
     });
   }
@@ -69,7 +69,7 @@ myApp.service('UserService', function ($http, $location) {
       method: 'DELETE',
       url: '/breweries/' + brewery,
     }).then(function (response) {
-      console.log('delete response is: ', response.data);
+      // console.log('delete response is: ', response.data);
     });
   }
 
@@ -80,8 +80,7 @@ myApp.service('UserService', function ($http, $location) {
     }).then(function (response) {
       // console.log('get map favs response is: ', response);
       self.mapFavoritesObj.list = response.data;
-      console.log('get map favs response is: ', self.mapFavoritesObj);
-      
+      // console.log('get map favs response is: ', self.mapFavoritesObj);
     });
   }
 
