@@ -51,9 +51,10 @@ High level list of items completed:
 Features that you would like to add at some point in the future:
 
 - [ ] Mobile responsive design
-- [ ] Expand information within the brewery database (open hours, website, social media, etc.)
-- [ ] Incorporate a notification/alert system that confirms to the user that each button they have selected has been selected
+- [ ] Expand information within the brewery database (open hours, website, social media, etc.) / add BreweryDB API connection
+- [ ] Incorporate a notification/alert system that confirms to the user that each brewery button they have selected has been selected
 - [ ] More dynamic interaction between brewery information and map 
+- [ ] Change the pin design on the map
 
 ## Authors
 
