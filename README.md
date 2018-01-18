@@ -2,7 +2,7 @@
 
 BikeBrewMN is a web application combining biking and breweries in Minnesota. The database contains every brewery's information in the state of Minnesota and allows users to save their favorite breweries. Additionally, users have an interactive map which populates their favorite breweries along with their chosen bike route and diections. 
 
-[ ] Link to the live version of the app if it's hosted on Heroku.
+[ ] Link to the live version of the app when it's hosted on Heroku.
 
 - [Take a look at my project scope here](https://docs.google.com/document/d/1RVb7cJbX4B_1CxbWtwK6yrFTSbYnUJyGIuLqZl9dS1c/edit?usp=sharing)
 
