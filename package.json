@@ -21,7 +21,7 @@
     "bootstrap": "^3.3.7",
     "express": "^4.13.1",
     "express-session": "^1.13.0",
-    "jquery": "^2.1.4",
+    "jquery": "^2.2.4",
     "ngmap": "^1.18.4",
     "nodemon": "^1.14.11",
     "passport": "^0.2.2",
