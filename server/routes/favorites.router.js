@@ -33,7 +33,7 @@ router.get('/favorite', function (req, res) {
   if (req.isAuthenticated()) {
     console.log('user is logged in');
     var userId = req.user.id;
-    console.log('user id? ', userId);
+    console.log('user id? ', userId.id);
     pool.connect(function (connectionError, client, done) {
       if (connectionError) {
         console.log(connectionError);
