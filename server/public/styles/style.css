@@ -174,6 +174,7 @@ table {
 #footer-style a {
   text-decoration: none;
   color: white;
+  align-items: center;
 }
 
 #footer-style a:hover {
