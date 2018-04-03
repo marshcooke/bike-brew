@@ -21,6 +21,7 @@
     "bootstrap": "^3.3.7",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
+    "heroku-cli": "^6.16.4",
     "jquery": "^2.2.4",
     "ngmap": "^1.18.4",
     "nodemon": "^1.17.3",
