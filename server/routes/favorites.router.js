@@ -4,11 +4,11 @@ var pool = require('../modules/pool.js');
 
 // Handles Ajax request for user information if user is authenticated
 router.get('/', function (req, res) {
-  console.log('get /favorites route');
+  // console.log('get /favorites route');
   // check if logged in
   if (req.isAuthenticated()) {
     // send back user object from database
-    console.log('logged in', req.user);
+    // console.log('logged in', req.user);
     var userInfo = {
       username: req.user.username
     };
@@ -24,35 +24,35 @@ router.get('/', function (req, res) {
 // clear all server session information about this user
 router.get('/logout', function (req, res) {
   // Use passport's built-in method to log out the user
-  console.log('Logged out');
+  // console.log('Logged out');
   req.logOut();
   res.sendStatus(200);
 });
 
 router.get('/favorite', function (req, res) {
   if (req.isAuthenticated()) {
-    console.log('user is logged in');
+    // console.log('user is logged in');
     var userId = req.user.id;
-    console.log('user id? ', userId.id);
+    // console.log('user id? ', userId.id);
     pool.connect(function (connectionError, client, done) {
       if (connectionError) {
-        console.log(connectionError);
+        // console.log(connectionError);
         res.sendStatus(500);
       } else {
         client.query('SELECT * FROM users_breweries INNER JOIN breweries ON users_breweries.breweries_id = breweries.id WHERE users_id = $1;', [userId], function (queryError, resultsObj) {
           done();
           if (queryError) {
-            console.log(queryError);
+            // console.log(queryError);
             res.sendStatus(500);
           } else {
-            console.log('resultobj.row: ', resultsObj.rows);
+            // console.log('resultobj.row: ', resultsObj.rows);
             res.send(resultsObj.rows);
           }
         });
       }
     });
   } else {
-    console.log('not logged in');
+    // console.log('not logged in');
     res.send(false);
   }
 });
