@@ -6,9 +6,9 @@
                   <!-- use md-card and table class -->
                   <!-- refer to ng material documentation on how to sort table (md-sort) -->
                   <tr>
-                        <th>Breweries</th>
-                        <th>City</th>
-                        <th></th>
+                        <th scope="col">Breweries</th>
+                        <th scope="col">City</th>
+                        <th scope="col">Add to Favorites</th>
                   </tr>
                   <tr ng-repeat="brewery in bc.allBreweriesObj.brew | orderBy: 'breweryname'">
                         <td>{{brewery.breweryname}}</td>
