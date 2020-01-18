@@ -5,9 +5,9 @@
     <div class="container" ng-init="fc.getFavorites()">
         <table>
             <tr>
-                <th>Favorite Breweries</th>
-                <th>City</th>
-                <th></th>
+                <th scope="col">Favorite Breweries</th>
+                <th scope="col">City</th>
+                <th scope="col">Select your Favorite</th>
             </tr>
             <tr ng-repeat="favorite in fc.allFavoritesObj.favorite |  orderBy: 'breweryname'">
                 <td>{{favorite.breweryname}}</td>
@@ -16,6 +16,5 @@
             </tr>
         </table>
     </div>
-
 </div>
 <div ng-include="'views/partials/footer.html'"></div>
