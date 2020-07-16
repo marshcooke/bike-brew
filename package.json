@@ -23,7 +23,7 @@
     "express-session": "^1.17.0",
     "heroku-cli": "^7.0.9",
     "jquery": "^3.4.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "ngmap": "^1.18.5",
     "nodemon": "^1.19.4",
     "npm": "^6.13.6",
